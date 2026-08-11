@@ -12,6 +12,7 @@ L.O.V.E. 是一套 Agent 环境配置集合（agent kickstart config set）—�
 - **文档即产品，AI 即安装器**：本体是 VitePress 文档站，核心是 `install.md`（AI 可读的安装指南）
 - **装"家"，不装"主人"**：不绑定任何 agent 平台，只铺好家的骨架，用户把自己的 agent 接进来
 - **Docker（\*nix）/ WSL（Windows）双轨**：一套配置两端复用
+- **install.sh = 唯一真相，install.ps1 = Windows 带路**：Win 跑不了 `.sh`，所以 PowerShell 脚本负责探测 WSL、转换 `/mnt/c/...` 路径、交棒给 bash——逻辑只写一遍
 
 ## 目录结构
 
@@ -24,9 +25,14 @@ love/
 │   ├── guides/              # 进阶：自定义人格、模块扩展
 │   └── reference/           # 配置项参考
 ├── scripts/
-│   └── install.sh           # 一键安装
-├── templates/               # 家装模板（{{WORKSPACE}} 占位符）
-└── docker/                  # *nix 容器方案
+│   ├── install.sh           # *nix 安装逻辑（唯一真相）
+│   └── install.ps1          # Windows 入口：探测 WSL → 交棒 bash
+├── templates/               # 家装模板（{{WORKSPACE}}/{{AGENT_NAME}}/{{BORN}} 占位符）
+│   ├── agent.md             # 人格模板
+│   ├── heartbeat.md         # 心跳规则
+│   ├── MEMORY.md            # 长期记忆骨架
+│   └── .gitignore
+└── docker/                  # *nix 容器方案（TODO）
 ```
 
 ## 状态
