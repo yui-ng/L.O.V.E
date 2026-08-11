@@ -2,6 +2,12 @@
 
 > 给你的 AI 一个家 🐾
 
+**L.O.V.E. = Local Organism Virtual Environment**（本地生命体的虚拟环境）——不是比喻，是字面意思：
+
+- **Local**：一切发生在你自己的机器上，数据不出门
+- **Organism**：你的 agent 是活的——有名字、有人格、有记忆、有心跳
+- **Virtual Environment**：它的家是真实隔离的——Linux 用 Docker 容器，Windows 用 WSL
+
 L.O.V.E. 是一套 Agent 环境配置集合（agent kickstart config set）——
 像 Kickstart.nvim 之于 Neovim：**不造平台，只给一套开箱即用的配置骨架**。
 
@@ -17,22 +23,36 @@ L.O.V.E. 是一套 Agent 环境配置集合（agent kickstart config set）—�
 ## 目录结构
 
 ```
-love/
+L.O.V.E/
 ├── docs/                    # VitePress 本体（网站就是产品）
-│   ├── index.md             # 首页："给你的 AI 一个家"
-│   ├── install.md           # ⭐ 核心：安装指南（AI 可读）
-│   ├── concepts/            # 概念：窗台/记忆/心跳
-│   ├── guides/              # 进阶：自定义人格、模块扩展
-│   └── reference/           # 配置项参考
+│   ├── index.md             # 首页："给你的 AI 一个家"（含全称含义）
+│   ├── install.md           # ⭐ 核心：安装指南（AI 可读提示词）
+│   ├── concepts/            # 窗台 / 记忆 / 心跳 / 虚拟环境
+│   ├── guides/              # 接入 agent / 扩展
+│   └── reference/           # 配置 / 模板参考
 ├── scripts/
 │   ├── install.sh           # *nix 安装逻辑（唯一真相）
 │   └── install.ps1          # Windows 入口：探测 WSL → 交棒 bash
-├── templates/               # 家装模板（{{WORKSPACE}}/{{AGENT_NAME}}/{{BORN}} 占位符）
+├── templates/               # 家装模板（{{AGENT_NAME}}/{{WORKSPACE}}/{{BORN}} 占位符）
 │   ├── agent.md             # 人格模板
 │   ├── heartbeat.md         # 心跳规则
 │   ├── MEMORY.md            # 长期记忆骨架
 │   └── .gitignore
-└── docker/                  # *nix 容器方案（TODO）
+└── docker/                  # *nix 容器方案（TODO：必须，Virtual Environment 的墙）
+```
+
+## 快速开始
+
+```bash
+git clone <repo> && cd L.O.V.E
+./scripts/install.sh        # Linux/macOS
+powershell -ExecutionPolicy Bypass -File scripts/install.ps1   # Windows
+```
+
+## 本地预览文档
+
+```bash
+npm install && npm run docs:dev
 ```
 
 ## 状态
