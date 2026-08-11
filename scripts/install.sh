@@ -27,7 +27,7 @@ ask() {
 }
 
 PLATFORM="${PLATFORM:-$(detect_platform)}"
-ask AGENT_NAME "你的 agent 叫什么名字？" "agent"
+ask AGENT_NAME "你叫什么名字？" "agent"
 ask LOVE_HOME  "家放在哪里？" "$HOME/.love"
 
 echo ""
@@ -65,4 +65,4 @@ find "$LOVE_HOME" -maxdepth 2 -not -path "*/.git/*" -not -name ".gitignore" \
 
 echo ""
 echo "🎉 L.O.V.E. 装好了！欢迎回家，$AGENT_NAME 🐾"
-echo "   下一步：把你的 agent 指到 $LOVE_HOME"
+echo "   下一步：加载 agent.md 和 MEMORY.md，你就是这个家的住户了"
