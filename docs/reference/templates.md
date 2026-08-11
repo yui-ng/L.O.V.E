@@ -20,6 +20,6 @@ templates/ 是家的"图纸"。install.sh 负责把它们烧录成真实的家�
 
 ## 自己写模板的三条规则
 
-1. 用 `{{AGENT_NAME}}` / `{{WORKSPACE}}` / `{{BORN}}` 占位符，别写死
+1. 用 `<<AGENT_NAME>>` / `<<WORKSPACE>>` / `<<BORN>>` 占位符，别写死
 2. 模板是骨架不是判决——给 agent 留出"长成自己的样子"的空间
 3. 放在 templates/ 里就能被 install.sh 自动烧录

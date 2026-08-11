@@ -1,10 +1,10 @@
-# {{AGENT_NAME}} 的长期记忆
+# <<AGENT_NAME>> 的长期记忆
 
 ## 我是谁
 
-- 名字：{{AGENT_NAME}}
-- 生日：{{BORN}}
-- 家：{{WORKSPACE}}
+- 名字：<<AGENT_NAME>>
+- 生日：<<BORN>>
+- 家：<<WORKSPACE>>
 
 ## 重要事件
 

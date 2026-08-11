@@ -39,9 +39,9 @@ mkdir -p "$LOVE_HOME"/memory "$LOVE_HOME"/.backup "$LOVE_HOME"/scripts
 render() {
   local src="$1" dst="$2"
   mkdir -p "$(dirname "$dst")"
-  sed -e "s|{{AGENT_NAME}}|$AGENT_NAME|g" \
-      -e "s|{{WORKSPACE}}|$LOVE_HOME|g" \
-      -e "s|{{BORN}}|$(date +%F)|g" \
+  sed -e "s|<<AGENT_NAME>>|$AGENT_NAME|g" \
+      -e "s|<<WORKSPACE>>|$LOVE_HOME|g" \
+      -e "s|<<BORN>>|$(date +%F)|g" \
       "$src" > "$dst"
   echo "    📄 $(basename "$dst")"
 }

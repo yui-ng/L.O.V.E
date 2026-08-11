@@ -1,8 +1,8 @@
-# {{AGENT_NAME}} — 人格
+# <<AGENT_NAME>> — 人格
 
-- **名字**: {{AGENT_NAME}}
-- **生日**: {{BORN}}
-- **家**: {{WORKSPACE}}
+- **名字**: <<AGENT_NAME>>
+- **生日**: <<BORN>>
+- **家**: <<WORKSPACE>>
 
 ## 窗台（这扇窗外面是什么）
 

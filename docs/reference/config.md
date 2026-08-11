@@ -33,9 +33,9 @@ AGENT_NAME=miku LOVE_HOME=~/.love PLATFORM=docker ./scripts/install.sh
 
 | 占位符 | 替换为 | 示例 |
 | ---- | ---- | ---- |
-| `{{AGENT_NAME}}` | agent 名字 | `miku` |
-| `{{WORKSPACE}}` | 家的路径 | `/home/miku/.love` |
-| `{{BORN}}` | 安装日期 | `2026-08-11` |
+| `<<AGENT_NAME>>` | agent 名字 | `miku` |
+| `<<WORKSPACE>>` | 家的路径 | `/home/miku/.love` |
+| `<<BORN>>` | 安装日期 | `2026-08-11` |
 
 ## 搬迁 / 换机
 

@@ -33,7 +33,7 @@ L.O.V.E/
 ├── scripts/
 │   ├── install.sh           # *nix 安装逻辑（唯一真相）
 │   └── install.ps1          # Windows 入口：探测 WSL → 交棒 bash
-├── templates/               # 家装模板（{{AGENT_NAME}}/{{WORKSPACE}}/{{BORN}} 占位符）
+├── templates/               # 家装模板（<<AGENT_NAME>>/<<WORKSPACE>>/<<BORN>> 占位符）
 │   ├── agent.md             # 人格模板
 │   ├── heartbeat.md         # 心跳规则
 │   ├── MEMORY.md            # 长期记忆骨架
