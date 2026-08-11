@@ -1,0 +1,11 @@
+# Netlify 部署配置 — VitePress
+[build]
+  command = "npm install && npm run docs:build"
+  publish = "docs/.vitepress/dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# 预览分支也自动构建（可选）
+# [context.deploy-preview]
+#   command = "npm install && npm run docs:build"
